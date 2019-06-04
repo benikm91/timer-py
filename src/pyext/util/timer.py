@@ -6,8 +6,10 @@ from typing import Callable
 class TimerPrints:
 
     @staticmethod
-    def highlight(msg) -> None:
-        print("** " + msg)
+    def highlight(pre) -> Callable:
+        def highlight_print(msg):
+           print(pre + msg)
+        return highlight_print
 
     @staticmethod
     def mute(msg) -> None:
@@ -20,7 +22,7 @@ class Timer(TimerPrints):
     def _get_current_time() -> float:
         return time.clock()
 
-    def __init__(self, title: str = '', f_print: Callable = TimerPrints.highlight):
+    def __init__(self, title: str = '', f_print: Callable = print):
         self._print = f_print
         self.title = title
 

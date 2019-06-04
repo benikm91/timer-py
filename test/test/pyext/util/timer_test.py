@@ -6,5 +6,5 @@ with Timer("1. HELLO WORLD"):
 with Timer("2. HELLO WORLD", f_print=Timer.mute):
     print("Stuff...")
 
-with Timer("3. HELLO WORLD", f_print=print):
+with Timer("3. HELLO WORLD", f_print=Timer.highlight('** ')):
     print("Stuff...")
