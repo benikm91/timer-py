@@ -20,7 +20,7 @@ class Timer(TimerPrints):
     def _get_current_time() -> float:
         return time.clock()
 
-    def __init__(self, title: str = '', f_print: Callable[[str], None] = TimerPrints.highlight):
+    def __init__(self, title: str = '', f_print: Callable = TimerPrints.highlight):
         self._print = f_print
         self.title = title
 
