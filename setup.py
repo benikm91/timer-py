@@ -6,7 +6,7 @@ setup(
     description='Simple Timer implementation.',
     url='https://github.com/benikm91/timer-py',
     author='Benjamin Meyer',
-    author_email='benjamin.meyer@fhnw.ch',
+    author_email='benikm91@gmail.com',
     package_dir={'': 'src'},
     packages=find_packages('src'),
     python_requires='>=3',
